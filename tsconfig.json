@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    // 他の設定項目
     "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "./build/js/",
+    "target": "es6",
+    "jsx": "react", // 必要に応じて
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "dist",
     "strict": true,
-    "skipLibCheck": true
-  }
+    "moduleResolution": "node",
+    "baseUrl": ".", // 必要に応じて
+    "types": ["jest", "expect-type", "node"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
